@@ -1,0 +1,23 @@
+<br>
+<br>
+<h3>Lista de profesores</h3>
+<br>
+
+<div class="table-responsive">
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th style="width: 70%;">Nombre</th>
+            <th style="width: 30%;">Asignaturas</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let profesor of profesores">
+            <td>{{ profesor.nombre }}</td>
+            <td>
+                <button class="btn btn-info active" (click)="verAsignaturas(profesor.id)">Ver</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>

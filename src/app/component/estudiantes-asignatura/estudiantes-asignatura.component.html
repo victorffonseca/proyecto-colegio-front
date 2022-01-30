@@ -1,0 +1,21 @@
+<br>
+<br>
+<h3>Lista de estudiantes de la asignatura {{ asignatura.nombre }} del {{ asignatura.curso.grado }}{{ asignatura.curso.salon }}</h3>
+<br>
+
+<div class="table-responsive">
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let estudiante of asignatura.estudiantes">
+            <td>{{ estudiante.nombre }}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<button class="btn btn-warning active" (click)="regresarAAsignaturas()">Regresar a lista de asignaturas</button>
